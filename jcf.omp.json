@@ -1,0 +1,162 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "final_space": true,
+    "console_title": true,
+    "console_title_style": "template",
+    "console_title_template": "{{if .Root}}root :: {{end}}{{.Shell}} :: {{.Folder}}",
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "segments": [
+                {
+                    "type": "session",
+                    "style": "diamond",
+                    "foreground": "#fafafa",
+                    "leading_diamond": "",
+                    "background": "#2f2f2f",
+                    "properties": {
+                        "user_info_separator": "<#7a7a7a></>",
+                        "display_default": false,
+                        "user_color": "#77f5d6",
+                        "host_color": "#2EEFBF",
+                        "postfix": "<#7a7a7a> </>"
+                    }
+                },
+                {
+                    "type": "root",
+                    "style": "diamond",
+                    "foreground": "#ffff66",
+                    "background": "#2f2f2f",
+                    "properties": {
+                        "root_icon": "",
+                        "postfix": "<#7a7a7a> </>"
+                    }
+                },
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "foreground": "#fafafa",
+                    "background": "#2f2f2f",
+                    "properties": {
+                        "style": "folder",
+                        "enable_hyperlink": true
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "diamond",
+                    "foreground": "#3bc7ff",
+                    "trailing_diamond": "",
+                    "background": "#2f2f2f",
+                    "properties": {
+                        "display_stash_count": false,
+                        "display_upstream_icon": false,
+                        "display_status": false,
+                        "status_colors_enabled": true,
+                        "color_background": false,
+                        "local_changes_color": "#ffeb3b",
+                        "working_color": "#E84855",
+                        "staging_color": "#2FDA4E",
+                        "ahead_color": "#2EC4B6",
+                        "behind_color": "#8A4FFF",
+                        "prefix": "<#7a7a7a> </>"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "right",
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "diamond",
+                    "foreground": "#fafafa",
+                    "background": "#2f2f2f",
+                    "leading_diamond": "",
+                    "properties": {
+                        "text": "",
+                        "prefix": "",
+                        "postfix": ""
+                    }
+                },
+                {
+                    "type": "node",
+                    "style": "diamond",
+                    "foreground": "#6CA35E",
+                    "background": "#2f2f2f",
+                    "properties": {
+                        "prefix": "  ",
+                        "postfix": "<#7a7a7a> </>"
+                    }
+                },
+                {
+                    "type": "time",
+                    "style": "diamond",
+                    "trailing_diamond": "",
+                    "foreground": "#fafafa",
+                    "background": "#2f2f2f",
+                    "properties": {
+                        "time_format": "15:04:05",
+                        "postfix": "<#007ACC>  </>"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#7a7a7a",
+                    "properties": {
+                        "text": "❯",
+                        "prefix": "",
+                        "postfix": ""
+                    }
+                }
+            ]
+        },
+        {
+            "type": "rprompt",
+            "alignment": "right",
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#7a7a7a",
+                    "properties": {
+                        "text": "❮"
+                    }
+                },
+                {
+                    "type": "executiontime",
+                    "style": "plain",
+                    "foreground": "#FFCE5C",
+                    "properties": {
+                        "threshold": 500,
+                        "style": "roundrock",
+                        "postfix": "<#fafafa>  </>"
+                    }
+                },
+                {
+                    "type": "exit",
+                    "style": "plain",
+                    "foreground": "#9FD356",
+                    "properties": {
+                        "display_exit_code": true,
+                        "always_numeric": true,
+                        "always_enabled": true,
+                        "error_color": "#E84855",
+                        "color_background": false,
+                        "prefix": "  "
+                    }
+                }
+            ]
+        }
+    ]
+}
