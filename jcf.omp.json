@@ -46,7 +46,7 @@
                 {
                     "type": "git",
                     "style": "diamond",
-                    "foreground": "#3bc7ff",
+                    "foreground": "#6aa84f",
                     "trailing_diamond": "",
                     "background": "#2f2f2f",
                     "properties": {
@@ -57,8 +57,8 @@
                         "color_background": false,
                         "local_changes_color": "#ffeb3b",
                         "working_color": "#E84855",
-                        "staging_color": "#2FDA4E",
-                        "ahead_color": "#2EC4B6",
+                        "staging_color": "#FF9100",
+                        "ahead_color": "#3bc7ff",
                         "behind_color": "#8A4FFF",
                         "prefix": "<#7a7a7a> </>"
                     }
