@@ -23,7 +23,7 @@ Run the following command
 This module allows to have auto-complete in powershell
 
 ```
-Install-Module -Name PSReadLine -RequiredVersion 2.2.0-beta1 -AllowPrerelease
+Install-Module -Name PSReadLine -RequiredVersion 2.2.0-beta3 -AllowPrerelease
 ```
 
 ### How to load the profile in powershell
