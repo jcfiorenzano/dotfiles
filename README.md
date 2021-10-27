@@ -13,6 +13,12 @@
 
 - Config your terminal to use the CaskaydiaCove font.
 
+#### Terminal Icons
+
+Run the following command
+
+`Install-Module -Name Terminal-Icons -Repository PSGallery`
+
 #### PSReadLine
 This module allows to have auto-complete in powershell
 
