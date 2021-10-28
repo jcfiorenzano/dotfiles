@@ -5,8 +5,6 @@ Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
 #Set-PSReadLineOption -EditMode Vi
-Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
-Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 #function OnViModeChange {
 #    if ($args[0] -eq 'Command') {
