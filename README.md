@@ -1,3 +1,9 @@
+## Nvim Plug configuration
+
+For telescope to work you need to install [riggrep](https://github.com/BurntSushi/ripgrep), if you are on windows
+you can do `choco install ripgrep`
+
+Also you will need `sharkdp/fd` for windows you can do `choco install fd`
 ## Powershell configuration
 
 ### Requirements:

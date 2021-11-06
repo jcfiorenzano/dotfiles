@@ -1,4 +1,4 @@
-oh-my-posh --init --shell pwsh --config D:\dev\configs\jcf.omp.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config D:\dev\dotfiles\jcf.omp.json | Invoke-Expression
 #########################################################################################
 # PSReadLine Configuration
 Set-PSReadLineOption -PredictionSource History
