@@ -1,4 +1,4 @@
-source $HOME/AppData/Local/nvim/vim-plug/plugins.vim
+source ~/.config/nvim/vim-plug/plugins.vim
 syntax on
 
 set noerrorbells
@@ -46,7 +46,17 @@ nnoremap <leader>ps :Rg<CR>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
 
-"------------NERDTree------------------
+"-------------TabNavigation-------------
+
+nnoremap <leader>1 :tabn 1 <CR>
+nnoremap <leader>2 :tabn 2 <CR>
+nnoremap <leader>3 :tabn 3 <CR>
+nnoremap <leader>4 :tabn 4 <CR>
+nnoremap <leader>5 :tabn 5 <CR>
+nnoremap <leader>tn :tabnew <CR>
+nnoremap <leader>tj :tabn <CR>
+nnoremap <leader>tk :tabp <CR>
+""------------NERDTree------------------
 nnoremap <leader>t :NERDTreeFocus<CR>
 nnoremap <leader>T :NERDTreeToggle<CR>
 " Exit Vim if NERDTree is the only window left.
