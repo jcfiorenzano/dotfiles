@@ -2,6 +2,7 @@ source ~/.config/nvim/vim-plug/plugins.vim
 syntax on
 
 set noerrorbells
+set autoindent
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -46,6 +47,7 @@ nnoremap <leader>ps :Rg<CR>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
 
+nnoremap <leader>h :wincmd h<CR>
 "-------------TabNavigation-------------
 
 nnoremap <leader>1 :tabn 1 <CR>
@@ -56,20 +58,24 @@ nnoremap <leader>5 :tabn 5 <CR>
 nnoremap <leader>tn :tabnew <CR>
 nnoremap <leader>tj :tabn <CR>
 nnoremap <leader>tk :tabp <CR>
+
 ""------------NERDTree------------------
-nnoremap <leader>t :NERDTreeFocus<CR>
-nnoremap <leader>T :NERDTreeToggle<CR>
+nnoremap <leader>oo :NERDTreeToggle<CR>
+nnoremap <leader>oo :NERDTreeFocus<CR>
 " Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+"autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * silent NERDTreeMirror
 "---------------------------------------
-nmap <leader>gd <Plug>(coc-definition)
-nnoremap <leader>h :wincmd h<CR>
-nmap <leader>gr <Plug>(coc-references)
-nnoremap <C-p> :GFiles<CR>
 
+"----------------COC-Definition----------
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <S-F12> <Plug>(coc-diagnostics-next)
+nmap <silent> <S-F11> <Plug>(coc-diagnostics-prev)
 let g:coc_global_extensions=[
             \'coc-snippets',
             \'coc-pairs',
@@ -78,3 +84,23 @@ let g:coc_global_extensions=[
             \'coc-prettier',
             \'coc-json',
             \]
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+"--------------------------------------
+
+"----------Telescope------------------
+nmap <leader>ff :Telescope find_files<CR>
+nmap <leader>fg :Telescope git_files<CR>
+nmap <leader>fb :Telescope buffers<CR>
+nmap <leader>fb :Telescope help_tags<CR>
+"-------------------------------------
+

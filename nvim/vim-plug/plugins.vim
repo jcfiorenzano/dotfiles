@@ -14,6 +14,11 @@ Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'yegappan/taglist'
 Plug 'sheerun/vim-polyglot'
+"------- Telescope-------------
+Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+"------------------------------
 call plug#end()

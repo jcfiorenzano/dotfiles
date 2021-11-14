@@ -1,10 +1,18 @@
 ## Nvim configuration
 
 The Nvim configuration folder in windows is in `~/AppData/Local/nvim`. Copy the nvim folder in there 
-and create a folder `undodir` in the same directory. Once the folder is copied then copy open nvim
-and run the command Plug-Install.
+and create a folder `undodir` in the same directory. In case of using windows the nvim configuration goes
+inside `~/.config/nvim`
 
 ### Nvim pluggin configuration
+
+**Install vim-plug**
+
+First is necessary to install vim-plug for that run the following command:
+`curl -flo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+
+#### Telescope
+
 For telescope to work you need to install [riggrep](https://github.com/BurntSushi/ripgrep), if you are on windows
 you can do `choco install ripgrep`
 
