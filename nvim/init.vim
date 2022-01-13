@@ -35,19 +35,17 @@ let g:netrw_altv = 1
 let g:netrw_liststyle = 4
 
 nnoremap <C-A> ggVG <CR>
+nmap <C-F> :Rg
+"----------Windows-------------------------------
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 60<CR>
-nnoremap <leader>ps :Rg<CR>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
-
-nnoremap <leader>h :wincmd h<CR>
 "-------------TabNavigation-------------
 
 nnoremap <leader>1 :tabn 1 <CR>
@@ -58,10 +56,10 @@ nnoremap <leader>5 :tabn 5 <CR>
 nnoremap <leader>tn :tabnew <CR>
 nnoremap <leader>tj :tabn <CR>
 nnoremap <leader>tk :tabp <CR>
+nnoremap <silent> <leader>x :tabclose<CR>
 
 ""------------NERDTree------------------
-nnoremap <leader>oo :NERDTreeToggle<CR>
-nnoremap <leader>oo :NERDTreeFocus<CR>
+nnoremap <leader>oe :NERDTreeToggle<CR>
 " Exit Vim if NERDTree is the only window left.
 "autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
@@ -95,12 +93,31 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
-"--------------------------------------
 
+" Highlight the symbold and references when holding the cursor
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <F2> <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+"--------------------------------------
 "----------Telescope------------------
 nmap <leader>ff :Telescope find_files<CR>
 nmap <leader>fg :Telescope git_files<CR>
 nmap <leader>fb :Telescope buffers<CR>
-nmap <leader>fb :Telescope help_tags<CR>
+nmap <leader>fh :Telescope help_tags<CR>
 "-------------------------------------
-
+"-----------Tests---------------------
+nmap <silent><leader>tt :TestNearest<CR>
+nmap <silent><leader>tf :TestFile<CR>
+nmap <silent><leader>ta :TestSuite<CR>
+nmap <silent><leader>tl :TestLast<CR>
+nmap <silent><leader>tv :TestVisit<CR>
+let test#strategy = 'neovim'
+let test#neovim#term_position = "vert botright 100"
+"-------------------------------------
+"-----------Terminal-----------------
+tnoremap <Esc> <C-\><C-n>

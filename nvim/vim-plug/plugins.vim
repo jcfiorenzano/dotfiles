@@ -1,4 +1,5 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
+Plug 'vim-test/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf' , {'do':{ ->fzf#install()}}
@@ -14,6 +15,7 @@ Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'yegappan/taglist'
 Plug 'sheerun/vim-polyglot'
+Plug 'puremourning/vimspector'
 "------- Telescope-------------
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
