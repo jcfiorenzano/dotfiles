@@ -1,0 +1,76 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "team.showWelcomeMessage": false,
+    "yaml.schemas": {
+        "file:///c%3A/Users/JCF/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.7/schemas/workflow.schema.json": "/.github/workflows/*.yml",
+        "file:///c%3A/Users/JCF/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.7/schemas/action.schema.json": "/action.yml"
+    },
+    "mssql.connections": [
+        {
+            "server": "JUFIOREN-P",
+            "database": "",
+            "authenticationType": "Integrated",
+            "profileName": "local",
+            "password": ""
+        }
+    ],
+    "explorer.confirmDelete": false,
+    "FSharp.useSdkScripts": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "python.pythonPath": "C:\\Users\\JCF\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+    "go.toolsManagement.autoUpdate": true,
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "editor.lineNumbers": "relative",
+    "editor.acceptSuggestionOnEnter": "on",
+    "settingsSync.ignoredExtensions": [
+    
+    ],
+    "workbench.colorTheme": "Gruvbox Dark Soft",
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#696969",
+        "statusBar.background": "#484949"
+    },
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "C:\\Users\\JCF\\.vimrc",
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "C:\\tools\\neovim\\Neovim\\bin\\nvim.exe",
+    "vim.foldfix": true,
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.tabs.enabled": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[go]": {
+    
+        "editor.insertSpaces": false
+    },
+    "editor.cursorStyle": "line",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "editor.accessibilitySupport": "off",
+    "python.defaultInterpreterPath": "C:\\Users\\JCF\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "go.autocompleteUnimportedPackages": true,
+    "go.enableCodeLens": {
+        "references": true
+    },
+    "vim.cursorStylePerMode.insert": "line",
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "redhat.telemetry.enabled": false,
+    "editor.fontFamily": "'CaskaydiaCove NF',Consolas, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "extensions.ignoreRecommendations": true,
+    "workbench.productIconTheme": "fluent-icons",
+    "zenMode.hideTabs": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.centerLayout": false,
+    "zenMode.hideStatusBar": false,
+    "debug.onTaskErrors": "showErrors",
+    "editor.bracketPairColorization.enabled": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vim.easymotion": true,
+    "vim.leader": " "
+}
