@@ -72,5 +72,14 @@
         "key": "ctrl+shift+[",
         "command": "-editor.fold",
         "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.closePanel"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "-workbench.action.quickOpenNavigatePreviousInViewPicker",
+        "when": "inQuickOpen && inViewsPicker"
     }
 ]
