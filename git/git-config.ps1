@@ -1,6 +1,7 @@
 # Configuration improvements
 git config core.fsmonitor true # improves commands performance in large repos
 git config --global --add --bool push.autoSetupRemote true # remove the need to od a push --upstream if the branch doesn't exist in origin
+git config --global core.autocrlf false # prevents changing line endings.
 # Command alias
 git config --global alias.ci commit
 git config --global alias.co checkout
