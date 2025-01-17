@@ -1,3 +1,6 @@
+# Naming
+git config --global user.email "jcfiorenzano23@gmail.com"
+git config --global user.name "Juan C. Fiorenzano"
 # Configuration improvements
 git config core.fsmonitor true # improves commands performance in large repos
 git config --global --add --bool push.autoSetupRemote true # remove the need to od a push --upstream if the branch doesn't exist in origin
